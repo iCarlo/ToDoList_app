@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col my-5">
+                <h2>Add Items</h2>
+                <form class>
+                  <div class="form-row align-items-center">
+                    <div class="col-sm-8 my-1">
+                      <label class="sr-only" for="inlineFormInputName">Name</label>
+                      <input type="text" class="form-control" id="inlineFormInputName" placeholder="What to do?">
+                    </div>
+                    <div class="col2-sm-2 my-1">
+                      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option>Filter</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-2 my-1">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock content %}
