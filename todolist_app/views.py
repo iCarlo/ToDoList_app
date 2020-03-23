@@ -31,5 +31,5 @@ def delete_do(request, items_id):
     todo_items_list = {
         'todo_items': todo_items,
     }
-    
+
     return render(request, 'todolist_app/index.html', todo_items_list)
