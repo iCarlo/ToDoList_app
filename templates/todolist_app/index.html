@@ -34,7 +34,15 @@
             <div class="col">
                 <ul class="list-group">
                     {% for items in todo_items %}
-                      <li class="list-group-item">{{ items.text }}</li>
+                      <li class="list-group-item">{{ items }}
+                          <div class="float-right">
+                            <form class="" action="{% url 'delete_do' items.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                          </div>
+                      </li>
+
                     {% endfor %}
                 </ul>
             </div>

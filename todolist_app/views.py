@@ -21,3 +21,15 @@ def add_do(request):
     }
 
     return render(request, 'todolist_app/index.html', todo_items_list)
+
+
+def delete_do(request, items_id):
+    models.Todo.objects.get(id=items_id).delete()
+
+    todo_items = models.Todo.objects.all().order_by('-added_date')
+
+    todo_items_list = {
+        'todo_items': todo_items,
+    }
+    
+    return render(request, 'todolist_app/index.html', todo_items_list)
